@@ -1,0 +1,14 @@
+.counterUI {
+  display: grid;
+  justify-items: center;
+}
+
+.counterBtn:hover,
+.counterBtn:active {
+  opacity: 20%;
+  backdrop-filter: 20px;
+}
+
+.counterBtnIMG {
+  font-size: 30px;
+}

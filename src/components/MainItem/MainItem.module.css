@@ -1,0 +1,38 @@
+.mainItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  width: 90%;
+  background-color: #161515;
+  backdrop-filter: 20px;
+  border-radius: 20px 20px 20px 0;
+  padding: 16px 20px;
+  cursor: "move";
+}
+
+.mainTimerContainer {
+  display: flex; 
+  align-items: center; 
+  width: 260px;
+}
+
+.mainItemTitle {
+  color: var(--white-df);
+}
+
+.mainItemTime {
+  color: var(--white-df);
+  margin-right: 60px;
+}
+
+
+
+.button:hover,
+.button:active {
+  color: var(--iconColorHover);
+}
+.mainItemIMG {
+  color: var(--iconColor);
+  font-size: 2.5rem;
+}

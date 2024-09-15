@@ -1,0 +1,71 @@
+.addGrafic {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+
+  background-color: teal;
+  border-radius: 20px;
+  width: 400px;
+  height: 200px;
+  padding: 20px 20px;
+}
+
+.addGraficClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: var(--white-df);
+}
+.addGraficCloseIMG:hover,
+.addGraficCloseIMG:active {
+  color: var(--accentColor);
+}
+
+.addGraficTime {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.addGraficFlex {
+  display: flex;
+  align-items: center;
+}
+
+
+.form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.addGraficTitle {
+  font-size: 20px;
+  font-weight: bold;
+  color-scheme: light dark;
+  margin-right: 20px;
+}
+.inputGrafic {
+  width: 100%;
+  height: 20px;
+  border: none;
+  outline: none;
+}
+
+
+.addGraficColor {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 60px;
+  height: 64px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+}
+.addGraficColor::-webkit-color-swatch {
+  border-radius: 50%;
+}

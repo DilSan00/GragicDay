@@ -1,0 +1,27 @@
+
+.navContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--bgColor);
+  border: 5px solid var(--accentColor);
+  width: 100px;
+  height: 100vh;
+  padding: 100px 0;
+}
+
+.navButton {
+  width: 100%;
+  padding: 20px 0;
+  transition: all .3s linear;
+}
+
+.navButton:hover, 
+.navButton:active {
+  background-color: #232323;
+}
+
+.NavigationImage {
+  color: var(--white-df);
+  font-size: 60px;
+}
