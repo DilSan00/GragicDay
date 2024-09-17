@@ -1,6 +1,4 @@
-<p style="color: red; background-color: #f8d7da; padding: 10px; border-radius: 5px;">
-  "Unsuccessful project"
-</p>
+**_Не удачный проект_**
 # Your Grafic Day
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
