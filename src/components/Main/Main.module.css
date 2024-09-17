@@ -1,18 +1,18 @@
 .main {
-  width: 87vw;
-  height: 86vh;
   padding: 0 20px;
   overflow: auto;
   scrollbar-width: none;
+  height: 100vh;
 }
 
 .main::-webkit-scrollbar {
   display: none;
 }
 
-
 .mainList {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 15px;
+  height: 100vh;
+  padding-bottom: 120px;
 }

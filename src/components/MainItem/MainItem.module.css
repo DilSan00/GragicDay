@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 30px;
-  width: 90%;
+  width: 84%;
   background-color: #161515;
   backdrop-filter: 20px;
   border-radius: 20px 20px 20px 0;
@@ -14,14 +14,15 @@
 .mainTimerContainer {
   display: flex; 
   align-items: center; 
-  width: 260px;
 }
 
 .mainItemTitle {
+  font-size: 1.5rem;
   color: var(--white-df);
 }
 
 .mainItemTime {
+  font-size: 1.5rem;
   color: var(--white-df);
   margin-right: 60px;
 }

@@ -1,9 +1,11 @@
 .addGrafic {
+  transform: translate(100%, 80%);
+
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 30px;
 
   background-color: teal;
@@ -35,7 +37,6 @@
   align-items: center;
 }
 
-
 .form {
   display: flex;
   align-items: center;
@@ -54,7 +55,6 @@
   outline: none;
 }
 
-
 .addGraficColor {
   -webkit-appearance: none;
   appearance: none;
@@ -68,4 +68,47 @@
 }
 .addGraficColor::-webkit-color-swatch {
   border-radius: 50%;
+}
+
+.addGraficBtn {
+  font-size: 60px;
+}
+
+@media (max-width: 480px) {
+  .addGrafic {
+    transform: translate(3.5%, 80%);
+  }
+
+  .addGraficTime {
+    gap: 10px;
+  }
+
+  .addGraficTitle {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+
+  .inputGrafic {
+    height: 18px;
+  }
+
+  .addGraficColor {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50px;
+    height: 54px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .addGraficColor::-webkit-color-swatch {
+    border-radius: 50%;
+  }
+
+  .addGraficBtn {
+    font-size: 50px;
+  }
 }

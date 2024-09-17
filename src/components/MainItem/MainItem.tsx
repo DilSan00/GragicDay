@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./MainItem.module.css";
 import { observer } from "mobx-react-lite";
-import { PlayCircleOutlined, DeleteOutlined } from "@ant-design/icons";
+import { DeleteOutlined } from "@ant-design/icons";
 import contentStore from "../../store/ContentStore";
 
 interface Time {
@@ -24,7 +24,6 @@ const MainItem: React.FC<MainItemProps> = observer(({
   bgColor,
   index,
 }) => {
-  const [isHoveredPlay, setIsHoveredPlay] = useState<boolean>(false);
   const [isHoveredDelete, setIsHoveredDelete] = useState<boolean>(false);
 
   const outputHeight = () => {
@@ -59,15 +58,6 @@ const MainItem: React.FC<MainItemProps> = observer(({
         <h2 className={styles.mainItemTime}>
           {`${time.hour}:${time.minute.toString().padStart(2, '0')}`}
         </h2>
-        <button
-          onMouseEnter={() => setIsHoveredPlay(true)}
-          onMouseLeave={() => setIsHoveredPlay(false)}
-        >
-          <PlayCircleOutlined
-            className={styles.mainItemIMG}
-            style={{ color: isHoveredPlay ? bgColor : "initial" }}
-          />
-        </button>
         <button
           onMouseEnter={() => setIsHoveredDelete(true)}
           onMouseLeave={() => setIsHoveredDelete(false)}

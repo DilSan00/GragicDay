@@ -1,18 +1,22 @@
-import React, { FC, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import styles from './Modal.module.css';
+import { observer } from 'mobx-react';
+import addGraficStore from '../../store/AddGraficStore';
 
 
 interface ModalProps {
   children: ReactNode;
 }
 
-const Modal: FC<ModalProps> = ({ children }) => {
+const Modal: React.FC<ModalProps> = ({ children }) => {
+  const openModal = addGraficStore.onModal ? styles.open : styles.close;
+
   return (
-    <div className={`${styles.modal}`}>
+    <div className={`${styles.modal} ${openModal}`}>
       { children }
     </div>
   );
 }
 
 
-export default Modal
+export default observer(Modal);

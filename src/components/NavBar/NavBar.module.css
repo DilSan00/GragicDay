@@ -1,5 +1,8 @@
-
 .navContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -11,12 +14,13 @@
 }
 
 .navButton {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px 0;
-  transition: all .3s linear;
 }
 
-.navButton:hover, 
+.navButton:hover,
 .navButton:active {
   background-color: #232323;
 }

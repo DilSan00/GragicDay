@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React from "react";
 import styles from "./CounterUI.module.css";
 import {CaretUpOutlined, CaretDownOutlined} from '@ant-design/icons'
 
@@ -10,7 +10,7 @@ interface CounterUIProps {
   count2: number,
 }
 
-const CounterUI: FC<CounterUIProps> = ({ onClick1, onClick2, count1, count2}) => {
+const CounterUI: React.FC<CounterUIProps> = ({ onClick1, onClick2, count1, count2}) => {
 
 
   return (

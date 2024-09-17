@@ -1,21 +1,23 @@
 import styles from "./NavBar.module.css";
-import { Link } from "react-router-dom";
+import { observer } from "mobx-react";
 import { FieldTimeOutlined, PlusCircleOutlined } from "@ant-design/icons";
+import addGraficStore from "../../store/AddGraficStore";
+
 
 const NavBar = () => {
   return (
-    <nav>
+    <nav className={styles.nav}>
       <div className={styles.navContainer}>
-        <Link to={"/addGrafic"} className={styles.navButton}>
-          <PlusCircleOutlined className={styles.NavigationImage} />
-        </Link>
-
-        <Link to={"/addGrafic"} className={styles.navButton}>
+        <button className={styles.navButton}>
           <FieldTimeOutlined className={styles.NavigationImage} />
-        </Link>
+        </button>
+
+        <button onClick={() => addGraficStore.openModal()} className={styles.navButton}>
+          <PlusCircleOutlined className={styles.NavigationImage} />
+        </button>
       </div>
     </nav>
   );
 };
 
-export default NavBar;
+export default observer(NavBar);

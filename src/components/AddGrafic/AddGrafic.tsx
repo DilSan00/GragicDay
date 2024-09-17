@@ -2,16 +2,15 @@ import React, { useState } from "react";
 import styles from "./AddGrafic.module.css";
 import { CloseOutlined, PlusCircleOutlined } from "@ant-design/icons";
 import CounterUI from "../../shared/CounterUI/CounterUI";
-import { Link } from "react-router-dom";
 
 import { observer } from "mobx-react-lite";
 import timerStore from "../../store/TimerStore";
 import contentStore from "../../store/ContentStore";
+import addGraficStore from "../../store/AddGraficStore";
 
 const AddGrafic: React.FC = observer(() => {
   const [title, setTitle] = useState("");
   const [color, setColor] = useState("#ffffff");
-  
 
   const handleAdd = () => {
     const id = Date.now();
@@ -19,9 +18,10 @@ const AddGrafic: React.FC = observer(() => {
       hour: timerStore.countHour1 * 10 + timerStore.countHour2,
       minute: timerStore.countMinute1 * 10 + timerStore.countMinute2,
     };
-    contentStore.addGrafic({ id, time, title, color});
+    contentStore.addGrafic({ id, time, title, color });
     setTitle("");
     setColor("#ffffff");
+    addGraficStore.closeModal();
   };
 
   const handleColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -29,9 +29,9 @@ const AddGrafic: React.FC = observer(() => {
   };
 
   return (
-    <div className={styles.addGrafic}>
-      <Link
-        to={"/"}
+    <div className={`${styles.addGrafic}`}>
+      <button
+        onClick={() => addGraficStore.closeModal()}
         className={styles.addGraficClose}
         style={{ position: "absolute" }}
       >
@@ -39,7 +39,7 @@ const AddGrafic: React.FC = observer(() => {
           className={styles.addGraficCloseIMG}
           style={{ fontSize: "30px" }}
         />
-      </Link>
+      </button>
       <form className={styles.form}>
         <label className={styles.addGraficTitle}>Title: </label>
         <input
@@ -78,9 +78,9 @@ const AddGrafic: React.FC = observer(() => {
           className={styles.addGraficColor}
         />
 
-        <Link to={"/"} onClick={handleAdd}>
-          <PlusCircleOutlined style={{ fontSize: "60px" }} />
-        </Link>
+        <button onClick={handleAdd}>
+          <PlusCircleOutlined className={styles.addGraficBtn} />
+        </button>
       </div>
     </div>
   );
