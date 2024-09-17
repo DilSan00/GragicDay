@@ -1,4 +1,4 @@
-**_Не удачный проект_**
+# **Unsuccessful project**
 # Your Grafic Day
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
